@@ -10,10 +10,18 @@ namespace G6E3
     {
         static void Main(string[] args)
         {
+            /*
+             * PROGRAMACION ESTRUCTURADA 07L
+             * GUIA 6 EJERCICIO 3
+             * 
+             * OSCAR ROLANDO CAÑAS VALDIZON
+             */
+
+            //VARIABLES
             bool error1 = true, error2 = true;
             string lados, l1_leght, l2_leght, l3_leght;
             int numTriang = 0, l1 = 0, l2 = 0, l3 = 0, equi = 0, iso = 0, esca = 0;
-
+            //CICLO PARA OBTENER LOS DATOS
             while(error1 == true)
             {
                 try
@@ -31,7 +39,7 @@ namespace G6E3
                     Console.Clear();
                 }
             }
-
+            //CICLOS PARA OBTENER DATOS DE CADA TRIANGULO
             for (int i = 0; i < numTriang; i++)
             {
                 while(error2 == true)
@@ -47,7 +55,7 @@ namespace G6E3
                         l1 = int.Parse(l1_leght);
                         l2 = int.Parse(l2_leght);
                         l3 = int.Parse(l3_leght);
-                }
+                    }
                     catch
                     {
                         error2 = true;
@@ -79,6 +87,7 @@ namespace G6E3
                     Console.WriteLine("Equilateros: " + equi + "\nIsoceles: " + iso + "\nEscaleno: " + esca);
                 }
                 error2 = true;
+                Console.WriteLine('\n');
             }
             Console.ReadKey();
         }
